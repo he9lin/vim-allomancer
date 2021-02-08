@@ -1,8 +1,8 @@
 " Vim allomancer colors file
 " Code file inspired by:
-" - https://github.com/patstockwell/vim-monokai-tasty 
+" - https://github.com/patstockwell/vim-monokai-tasty
 " - https://github.com/romainl/Apprentice
-" 
+"
 "Author: Nadim Edde <nadimeg@gmail.com>
 "TODO: Get consistency with colors and tokens
 
@@ -38,13 +38,13 @@ let s:white = {"cterm": "NONE", "gui": "#d6e9ff"}
 
 let s:light_red = {"cterm": "1", "gui": "#e06c75"}
 let s:dark_red = {"cterm": "9", "gui": "#af5f5f"}
-let s:orange = {"cterm": "11", "gui": "#FF875F"} 
+let s:orange = {"cterm": "11", "gui": "#FF875F"}
 let s:green = {"cterm": "2", "gui": "#87af87"}
 let s:aqua = {"cterm": "6", "gui": "#5fafaf"}
 let s:blue = {"cterm": "4", "gui": "#6E88A6"}
-let s:purple = {"cterm": "5", "gui": "#D18EC2"} 
+let s:purple = {"cterm": "5", "gui": "#D18EC2"}
 let s:dark_purple = {"cterm": "13", "gui": "#875faf"} "Xterm color palette 97
-let s:beige = {"cterm": "3", "gui": "#D7AFAF"} 
+let s:beige = {"cterm": "3", "gui": "#D7AFAF"}
 
 "Special text properties
 let s:none = { "cterm": "NONE", "gui": "NONE" }
@@ -53,7 +53,7 @@ let s:bold = { "cterm": "bold", "gui": "bold" }
 let s:underline = { "cterm": "underline", "gui": "underline" }
 let s:bold_underline = { "cterm": "bold,underline", "gui": "bold,underline" }
 
-" Helper function to highlight a group 
+" Helper function to highlight a group
 function! Highlight(group, fg, bg, style)
   exec "hi " . a:group
         \ . " ctermfg=" . a:fg["cterm"]
@@ -135,12 +135,12 @@ call Highlight("Constant", s:orange, s:black, s:none)
 call Highlight("Identifier", s:blue, s:black, s:none)
 call Highlight("Function", s:beige, s:black, s:none)
 call Highlight("Ignore", s:none, s:none, s:none)
-call Highlight("PreProc", s:aqua, s:black, s:none)
+call Highlight("PreProc", s:aqua, s:black, s:bold)
 call Highlight("Special", s:green, s:black, s:none)
 call Highlight("Statement", s:dark_red, s:black, s:none)
 call Highlight("String", s:green, s:black, s:none)
 call Highlight("Todo", s:purple, s:black, s:reverse)
-call Highlight("Type", s:dark_purple, s:black, s:none)
+call Highlight("Type", s:dark_purple, s:black, s:bold)
 call Highlight("StorageClass", s:light_red, s:black, s:none)
 call Highlight("TypeDef", s:purple, s:black, s:none)
 call Highlight("Underlined", s:aqua, s:black, s:underline)
